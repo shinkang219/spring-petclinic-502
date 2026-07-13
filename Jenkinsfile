@@ -8,9 +8,10 @@ pipeline {
   
   stages { 
     // github에 있는 소스코드 가져오기
-    stage(Git Clone {
+    stage(Git Clone) {
       steps{
-        git url 'https://github.com/shinkang219/spring-petclinic-502.git/', branch: 'main'
+        git url: 'https://github.com/shinkang219/spring-petclinic-502.git/', 
+        branch: 'main'
       }
     }
   }
